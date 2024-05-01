@@ -16,19 +16,19 @@ export PYSPARK_PYTHON=python3
 export PYSPARK_DRIVER_PYTHON=python3
 
 #1.install new conda environment 
-#conda create --name Junho_final
+conda create --name Junho_final
 source activate Junho_final
 
 #2.install third-party spark software
 pip install sparktorch
 
 #3.download MNIST dataset
-wget -O mnist_train.csv https://github.com/Junho0225/simple_cnn/raw/master/examples/mnist_train.csv
+wget -O mnist_train.csv https://raw.githubusercontent.com/Junho0225/simple_cnn/main/examples/mnist_train.csv
 
 # Run PySpark
 # Record the start time
 #start_time=$(date +%s)
-#spark-submit --deploy-mode client simple_cnn.py
+spark-submit --deploy-mode client simple_cnn.py
 
 # Record the end time
 end_time=$(date +%s)
